@@ -24,7 +24,8 @@ export class HousesList extends React.Component {
 
     render() {
         return (
-            <div className="house-list">
+            <div class="row">
+            <div col="col-xs-1"  className="house-list">
                 {this.state.houses.map((house) => (
                     <House
                         house={house}
@@ -32,6 +33,7 @@ export class HousesList extends React.Component {
                         updateHouse={this.updateHouse}
                     />
                 ))}
+            </div>
             </div>
         )
     }

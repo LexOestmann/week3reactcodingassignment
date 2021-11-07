@@ -19,7 +19,7 @@ export const House = (props) => {
             {house.rooms.map((room, index) => (
                 <li key={index}>
                     <label> {`${room.name} Area: ${room.area}`} </label>
-                    <button onClick={(e) => deleteRoom(room._id)}>Delete</button>
+                    <button type="submit" class="btn-danger" onClick={(e) => deleteRoom(room._id)}>Delete</button>
                 </li>
             ))}
         </ul>
@@ -27,7 +27,7 @@ export const House = (props) => {
 
     return (
         <div>
-            <h1>{house.name}</h1>
+            <h1 class="text-info">{house.name}</h1>
             {
                 rooms({ rooms, houseId: house._id, deleteRoom})
                 // passing through of the props which are the rooms
